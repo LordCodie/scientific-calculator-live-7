@@ -149,6 +149,33 @@
               </div>
             </div>
 
+            
+            <div class="row gx-1">
+              <div class="col-3">
+                <button type="button" class="btn btn-light w-100 mt-2 border">
+                  sin
+                </button>
+              </div>
+
+              <div class="col-3">
+                <button type="button" class="btn btn-light w-100 mt-2 border">
+                  ln
+                </button>
+              </div>
+
+              <div class="col-3">
+                <button type="button" class="btn btn-light w-100 mt-2 border">
+                  π
+                </button>
+              </div>
+
+              <div class="col-3">
+                <button type="button" class="btn btn-light w-100 mt-2 border">
+                  cos
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -161,46 +188,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const display = document.getElementById('calc-display')
-      const buttons = document.getElementsByClassName('btn')
-
-      let currentValue = '';
-
-      function evaluateResult() {
-        const convertedValue = currentValue
-        .replace('×', '*')
-        .replace('÷', '/')
-        .replace('%', '*0.01');
-
-        const result = eval (convertedValue);
-        currentValue = result.toString();
-        display.value = currentValue;
-      }
-
-      for (let i = 0; i < buttons.length; i++) {
-        const button = buttons[i];
-        button.addEventListener('click', function () {
-          const value = button.innerText;
-
-          if (value == 'AC') {
-            currentValue = '';
-            display.value = currentValue;
-          } else if (value == '=') {
-            evaluateResult()
-          } else {
-            currentValue += value;
-            display.value = currentValue;
-          }
-        })
-
-      }
-
-
-
-    });
-  </script>
+  <script src="srcipt.js"></script>
 
 </body>
 
